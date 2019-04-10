@@ -2,7 +2,7 @@ var express = require('express'),
 app = express(),
 port = process.env.PORT || 3000,
 mongoose = require('mongoose'),
-Task = require('./api/models/todoListModel'),
+Task = require('./api/models/todoListModels'),
 bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
