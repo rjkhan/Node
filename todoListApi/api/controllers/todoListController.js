@@ -54,16 +54,3 @@ exports.delete_a_task = function(req, res) {
   });
 };
 
-
-
-
-// list person
-exports.peron_info = function(req,res){
-	Person.find( {} , function(err,task ) {
-		if(err)
-			res.send(err);
-		res.json(task)
-	});
-};
-
-

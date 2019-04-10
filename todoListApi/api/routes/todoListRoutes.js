@@ -3,6 +3,7 @@
 module.exports = function(app){
 
 	var todoList = require('../controllers/todoListController');
+	var person = require('../controllers/personController');
 
 	// todoList Routes
 	app.route('/tasks')
@@ -14,8 +15,9 @@ module.exports = function(app){
 		.put(todoList.update_a_task)
 		.delete(todoList.delete_a_task);
 
+	//Person
 	app.route('/persons')
-		.get(todoList.peron_info);
-		//.post(todoList.create_a_person);
+		.get(person.person_info)
+		.post(person.create_a_person);
 
 };

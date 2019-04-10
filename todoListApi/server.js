@@ -11,6 +11,9 @@ mongoose.connect("mongodb://localhost/Tododb");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+Person = require('./api/models/personModels');
+
  
 var routes = require('./api/routes/todoListRoutes');
 routes(app);
